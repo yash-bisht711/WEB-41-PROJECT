@@ -1,0 +1,215 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(197, 194, 194);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: sticky;
+    top: 0.5px;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(236, 235, 235);
+    color: darkgray;
+}
+
+#header > .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo > a > img {
+    border-radius: 50px;
+    overflow: hidden;
+    max-width: 50px;
+    height: auto;
+}
+
+.search-bar {
+    display: flex;
+    border: 1px solid black;
+    width: 50%;
+    min-height: 40px;
+    align-items: center;
+    border-radius: 20px;
+    background-color: white;
+    color: gray;
+    padding: 5px 10px;
+}
+
+#search-bar {
+    outline: transparent;
+    border: none;
+    width: 80%;
+}
+
+.material-symbols-outlined {
+    color: rgb(235, 68, 68);
+}
+
+.auth-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.icon-link {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: black;
+}
+
+.hidden_class {
+    display: none !important;
+}
+
+main {
+    flex-grow: 1;
+}
+
+main > section {
+    margin: 8px 20px;
+    background-color: beige;
+    border: 1px solid;
+}
+
+#main > section#product col {
+    height: 70%;
+}
+
+#main > section > section {
+    margin: 8px 20px;
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 10px;
+    gap: 10px;
+}
+
+.hero {
+    padding: 20px;
+}
+
+.hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#serachProduct {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    min-height: 500px;
+    border: 2px solid;
+    margin: auto;
+    /* gap: 10px; */
+}
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    min-width: 200px;
+    padding: 10px;
+    margin: 10px 2px;
+    gap: 10px;
+}
+
+#product_collection {
+    width: 78%;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+#range{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid; */
+    justify-content: space-between;
+}
+
+#product_collection > div.search-filteredProduct {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 18px;
+    text-align: left;
+    align-items: flex-start;
+}
+
+#product_collection > div.search-filteredProduct > button.shop-cart {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkblue;
+    margin-top: auto; /* Push to the bottom */
+    align-self: flex-end; /* Align to the end of the container */
+}
+
+/* Footer */
+footer {
+    background-color: rgb(33, 33, 33);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    text-align: center;
+    color: aliceblue;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 90%;
+    }
+
+    #filter {
+        width: 100%;
+    }
+
+    #product_collection {
+        width: 100%;
+    }
+
+    #serachProduct {
+        flex-direction: column;
+    }
+
+    #product_collection > div.search-filteredProduct {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #product_collection > div.search-filteredProduct > button.shop-cart {
+        margin-left: 0;
+    }
+}
